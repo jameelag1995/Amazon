@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Related Items Carousel</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      .carousel-container {
+        width: 300px; /* Adjust the width to match your image dimensions */
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .carousel-slides {
+        display: flex;
+        overflow: hidden;
+      }
+
+      .carousel-slide {
+        flex: 0 0 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .carousel-slide img {
+        width: 100%;
+        height: auto;
+      }
+
+      .carousel-prev,
+      .carousel-next {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #0074cc;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .carousel-prev:hover,
+      .carousel-next:hover {
+        background-color: #0056a9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Product Name</h1>
+    <div class="carousel-container">
+      <div class="carousel-slides" style="width: 500px">
+        <div class="carousel-slide" style="display: flex; flex-direction: row">
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/I/61c4Ud7Os4L._AC_UL160_SR160,160_.jpg"
+            alt="Related Item 1"
+          />
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/I/81mejp6DwRL._AC_UL160_SR160,160_.jpg"
+            alt="Related Item 2"
+          />
+          
+        </div>
+        <div class="carousel-slide">
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/I/81mejp6DwRL._AC_UL160_SR160,160_.jpg"
+            alt="Related Item 2"
+          />
+        </div>
+        <div class="carousel-slide">
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/I/61D7yRNl4pL._AC_UL160_SR160,160_.jpg"
+            alt="Related Item 3"
+          />
+        </div>
+        <div class="carousel-slide">
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/I/61D7yRNl4pL._AC_UL160_SR160,160_.jpg"
+            alt="Related Item 3"
+          />
+          <p>Related Item 3</p>
+        </div>
+        <div class="carousel-slide">
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/I/61D7yRNl4pL._AC_UL160_SR160,160_.jpg"
+            alt="Related Item 3"
+          />
+          <p>Related Item 3</p>
+        </div>
+        <div class="carousel-slide">
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/I/61D7yRNl4pL._AC_UL160_SR160,160_.jpg"
+            alt="Related Item 3"
+          />
+          <p>Related Item 3</p>
+        </div>
+        <!-- Add more related items here -->
+      </div>
+      <button class="carousel-prev">Previous</button>
+      <button class="carousel-next">Next</button>
+    </div>
+    <script>
+      const container = document.querySelector(".carousel-container");
+      const slides = document.querySelectorAll(".carousel-slide");
+      const prevButton = document.querySelector(".carousel-prev");
+      const nextButton = document.querySelector(".carousel-next");
+
+      let currentSlideIndex = 0;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.style.transform = `translateX(${100 * (i - index)}%)`;
+        });
+      }
+
+      prevButton.addEventListener("click", () => {
+        currentSlideIndex =
+          (currentSlideIndex - 1 + slides.length) % slides.length;
+        showSlide(currentSlideIndex);
+      });
+
+      nextButton.addEventListener("click", () => {
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+        showSlide(currentSlideIndex);
+      });
+
+      // Initial slide display
+      showSlide(currentSlideIndex);
+    </script>
+  </body>
+</html>
