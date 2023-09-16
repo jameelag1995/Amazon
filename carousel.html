@@ -11,23 +11,35 @@
       }
 
       .carousel-container {
-        width: 300px; /* Adjust the width to match your image dimensions */
-        margin: 0 auto;
+        width: 100%; 
+        /* Adjust the width to match your image dimensions */
+        margin: auto;
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
       }
 
       .carousel-slides {
+        /* width: 100%; */
         display: flex;
+        justify-content: stretch;
+
+        
         overflow: hidden;
       }
 
       .carousel-slide {
-        flex: 0 0 100%;
+        flex-basis: 100%;
+        flex-grow: 0;
+        flex-shrink: 0;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
         text-align: center;
         transition: transform 0.5s ease-in-out;
+        justify-content: space-between;
+        align-items: center;
       }
 
       .carousel-slide img {
@@ -37,73 +49,493 @@
 
       .carousel-prev,
       .carousel-next {
-        margin-top: 10px;
-        padding: 10px 20px;
-        background-color: #0074cc;
-        color: #fff;
-        border: none;
+        margin: 10px;
+        padding-bottom: 4px;
+        width: 35px;
+        height: 35px;
+        background-color: #fff;
+        color: #333;
+        border: #333 solid 1px;
+        border-radius: 5px;
+        text-align: center;
+        
         cursor: pointer;
-        font-size: 16px;
+        font-size: 23px;
+        font-weight: bolder;
       }
 
       .carousel-prev:hover,
       .carousel-next:hover {
-        background-color: #0056a9;
+        background-color: #afafaf;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 160px;
+        max-height: 460px;
+        margin: 10px 20px;
+      }
+      .card img {
+        width: 160px;
+        height: 160px;
+      }
+      .card a {
+        max-height: 80px;
+        width: 160px;
+        text-decoration: none;
+        color: #007185;
+      }
+      .card a:hover {
+        text-decoration: underline;
+        color: #b12704;
+      }
+      .card .rating {
+        max-height: 20px;
+        width: 80px;
+      }
+      .card .category {
+        text-align: left;
+        max-height: 15px;
+      }
+
+      .card .price {
+        max-height: 22px;
+      }
+      .card .freeshipping {
+        max-height: 35px;
+
+        font-size: 12px;
       }
     </style>
   </head>
   <body>
     <h1>Product Name</h1>
     <div class="carousel-container">
-      <div class="carousel-slides" style="width: 500px">
-        <div class="carousel-slide" style="display: flex; flex-direction: row">
-          <img
-            src="https://images-na.ssl-images-amazon.com/images/I/61c4Ud7Os4L._AC_UL160_SR160,160_.jpg"
-            alt="Related Item 1"
-          />
-          <img
-            src="https://images-na.ssl-images-amazon.com/images/I/81mejp6DwRL._AC_UL160_SR160,160_.jpg"
-            alt="Related Item 2"
-          />
-          
+      <button class="carousel-prev">&#9001;</button>
+      <div class="carousel-slides" style="max-width: 90%">
+        <div class="carousel-slide">
+          <div class="card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/61c4Ud7Os4L._AC_UL160_SR160,160_.jpg"
+              alt="Image 1"
+            />
+            <a href="http://"
+              >PS5 Controller Charger Station with Fast Charging AC Adapter
+              5V/3A, Dual Controller</a
+            ><br />
+            <img class="rating" src="./Img/rating.png" alt="" />
+            <img
+              src="./Img/amazon-bestseller.png"
+              alt=""
+              style="width: 120px; height: 20px"
+            />
+            <div class="category">
+              <a href="http://">Playstation 4 Accessory Kits</a>
+            </div>
+            <br />
+            <div class="price">
+              $
+              <h3 style="display: inline-block">23.99</h3>
+            </div>
+            <br />
+            <div class="freeshipping">
+              <p>FREE Shipping on orders over $49 shipped by Amazon</p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/81mejp6DwRL._AC_UL160_SR160,160_.jpg"
+              alt="Image 1"
+            />
+            <a href="http://"
+              >FIFA 23 Standard Edition Playstation 5 (PS5)| English | Import
+              Region </a
+            ><br />
+            <img class="rating" src="./Img/rating.png" alt="" />
+            <img
+              src="./Img/amazon-bestseller.png"
+              alt=""
+              style="width: 120px; height: 20px"
+            />
+            <div class="category"><a href="http://">Playstation 5</a></div>
+            <br />
+            <div class="price">
+              $
+              <h3 style="display: inline-block">39.99</h3>
+            </div>
+            <br />
+            <div class="freeshipping">
+              <p>FREE Shipping on orders over $49 shipped by Amazon</p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/61D7yRNl4pL._AC_UL160_SR160,160_.jpg"
+              alt="Image 1"
+            />
+            <a href="http://"
+              >NexiGo PS5 Controller Charger with Thumb Grip Kit, Fast Charging
+              AC Adapter, Dualsense </a
+            ><br />
+            <img class="rating" src="./Img/rating.png" alt="" />
+            <img
+              src="./Img/amazon-bestseller.png"
+              alt=""
+              style="width: 120px; height: 20px"
+            />
+            <div class="category">
+              <a href="http://">Playstation 5 Faceplates</a>
+            </div>
+            <br />
+            <div class="price">
+              $
+              <h3 style="display: inline-block">21.99</h3>
+            </div>
+            <br />
+            <div class="freeshipping">
+              <p>FREE Shipping on orders over $49 shipped by Amazon</p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/613Ot5vWzAL._AC_UL160_SR160,160_.jpg"
+              alt="Image 1"
+            />
+            <a href="http://">Playstation Media Remote</a><br />
+            <img class="rating" src="./Img/rating.png" alt="" />
+            <div class="category"><a href="http://">Playstation 5</a></div>
+            <br />
+            <div class="price">
+              $
+              <h3 style="display: inline-block">29.99</h3>
+            </div>
+            <br />
+            <div class="freeshipping">
+              <p>FREE Shipping on orders over $49 shipped by Amazon</p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/71PQ-veSExL._AC_UL160_SR160,160_.jpg"
+              alt="Image 1"
+            />
+            <a href="http://"
+              >PS5 Stand and Cooling Station with RGB LED Controller Charging </a
+            ><br />
+            <img class="rating" src="./Img/rating.png" alt="" />
+            <div class="category">
+              <a href="http://">Playstation 4 Mounts, Brackets & Stands</a>
+            </div>
+            <br />
+            <div class="price">
+              $
+              <h3 style="display: inline-block">31.99</h3>
+            </div>
+            <br />
+            <div class="freeshipping">
+              <p>FREE Shipping on orders over $49 shipped by Amazon</p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/71Kwo5V9QOL._AC_UL160_SR160,160_.jpg"
+              alt="Image 1"
+            />
+            <a href="http://"
+              >Marvel's Spider-Man: Miles Morales Ultimate Edition - PlayStation
+              5</a
+            ><br />
+            <img class="rating" src="./Img/rating.png" alt="" />
+            <div class="category"><a href="http://">Playstation</a></div>
+            <br />
+            <div class="price">
+              $
+              <h3 style="display: inline-block">27.99</h3>
+            </div>
+            <br />
+            <div class="freeshipping">
+              <p>FREE Shipping on orders over $49 shipped by Amazon</p>
+            </div>
+          </div>
         </div>
         <div class="carousel-slide">
-          <img
-            src="https://images-na.ssl-images-amazon.com/images/I/81mejp6DwRL._AC_UL160_SR160,160_.jpg"
-            alt="Related Item 2"
-          />
+          <div class="card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/61I4OTK7DUL._AC_UL160_SR160,160_.jpg"
+              alt="Image 1"
+            />
+            <a href="http://">PlayStation 5 DualSense Charging Station</a><br />
+            <img class="rating" src="./Img/rating.png" alt="" />
+            <div class="category"><a href="http://">Playstation</a></div>
+            <br />
+            <div class="price">
+              $
+              <h3 style="display: inline-block">40.00</h3>
+            </div>
+            <br />
+            <div class="freeshipping">
+              <p>FREE Shipping on orders over $49 shipped by Amazon</p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/81yAIGEYq+L._AC_UL160_SR160,160_.jpg"
+              alt="Image 1"
+            />
+            <a href="http://"
+              >KontrolFreek FPS Freek Galaxy Black for Playstation 4 (PS4) and
+              Playstation 5 (PS5) | Performance </a
+            ><br />
+            <img class="rating" src="./Img/rating.png" alt="" />
+            <div class="category"><a href="http://">Playstation </a></div>
+            <br />
+            <div class="price">
+              $
+              <h3 style="display: inline-block">16.99</h3>
+            </div>
+            <br />
+            <div class="freeshipping">
+              <p>FREE Shipping on orders over $49 shipped by Amazon</p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/61c4Ud7Os4L._AC_UL160_SR160,160_.jpg"
+              alt="Image 1"
+            />
+            <a href="http://"
+              >PS5 Controller Charger Station with Fast Charging AC Adapter
+              5V/3A, Dual Controller</a
+            ><br />
+            <img class="rating" src="./Img/rating.png" alt="" />
+            <div class="category">
+              <a href="http://">Playstation 4 Accessory Kits</a>
+            </div>
+            <br />
+            <div class="price">
+              $
+              <h3 style="display: inline-block">23.99</h3>
+            </div>
+            <br />
+            <div class="freeshipping">
+              <p>FREE Shipping on orders over $49 shipped by Amazon</p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/61c4Ud7Os4L._AC_UL160_SR160,160_.jpg"
+              alt="Image 1"
+            />
+            <a href="http://"
+              >PS5 Controller Charger Station with Fast Charging AC Adapter
+              5V/3A, Dual Controller</a
+            ><br />
+            <img class="rating" src="./Img/rating.png" alt="" />
+            <div class="category">
+              <a href="http://">Playstation 4 Accessory Kits</a>
+            </div>
+            <br />
+            <div class="price">
+              $
+              <h3 style="display: inline-block">23.99</h3>
+            </div>
+            <br />
+            <div class="freeshipping">
+              <p>FREE Shipping on orders over $49 shipped by Amazon</p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/61c4Ud7Os4L._AC_UL160_SR160,160_.jpg"
+              alt="Image 1"
+            />
+            <a href="http://"
+              >PS5 Controller Charger Station with Fast Charging AC Adapter
+              5V/3A, Dual Controller</a
+            ><br />
+            <img class="rating" src="./Img/rating.png" alt="" />
+            <div class="category">
+              <a href="http://">Playstation 4 Accessory Kits</a>
+            </div>
+            <br />
+            <div class="price">
+              $
+              <h3 style="display: inline-block">23.99</h3>
+            </div>
+            <br />
+            <div class="freeshipping">
+              <p>FREE Shipping on orders over $49 shipped by Amazon</p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/61c4Ud7Os4L._AC_UL160_SR160,160_.jpg"
+              alt="Image 1"
+            />
+            <a href="http://"
+              >PS5 Controller Charger Station with Fast Charging AC Adapter
+              5V/3A, Dual Controller</a
+            ><br />
+            <img class="rating" src="./Img/rating.png" alt="" />
+            <div class="category">
+              <a href="http://">Playstation 4 Accessory Kits</a>
+            </div>
+            <br />
+            <div class="price">
+              $
+              <h3 style="display: inline-block">23.99</h3>
+            </div>
+            <br />
+            <div class="freeshipping">
+              <p>FREE Shipping on orders over $49 shipped by Amazon</p>
+            </div>
+          </div>
         </div>
-        <div class="carousel-slide">
-          <img
-            src="https://images-na.ssl-images-amazon.com/images/I/61D7yRNl4pL._AC_UL160_SR160,160_.jpg"
-            alt="Related Item 3"
-          />
-        </div>
-        <div class="carousel-slide">
-          <img
-            src="https://images-na.ssl-images-amazon.com/images/I/61D7yRNl4pL._AC_UL160_SR160,160_.jpg"
-            alt="Related Item 3"
-          />
-          <p>Related Item 3</p>
-        </div>
-        <div class="carousel-slide">
-          <img
-            src="https://images-na.ssl-images-amazon.com/images/I/61D7yRNl4pL._AC_UL160_SR160,160_.jpg"
-            alt="Related Item 3"
-          />
-          <p>Related Item 3</p>
-        </div>
-        <div class="carousel-slide">
-          <img
-            src="https://images-na.ssl-images-amazon.com/images/I/61D7yRNl4pL._AC_UL160_SR160,160_.jpg"
-            alt="Related Item 3"
-          />
-          <p>Related Item 3</p>
-        </div>
-        <!-- Add more related items here -->
+        <!-- <div class="carousel-slide">
+          <div class="card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/61c4Ud7Os4L._AC_UL160_SR160,160_.jpg"
+              alt="Image 1"
+            />
+            <a href="http://"
+              >PS5 Controller Charger Station with Fast Charging AC Adapter
+              5V/3A, Dual Controller</a
+            ><br />
+            <img class="rating" src="./Img/rating.png" alt="" />
+            <div class="category">
+              <a href="http://">Playstation 4 Accessory Kits</a>
+            </div>
+            <br />
+            <div class="price">
+              $
+              <h3 style="display: inline-block">23.99</h3>
+            </div>
+            <br />
+            <div class="freeshipping">
+              <p>FREE Shipping on orders over $49 shipped by Amazon</p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/8163O-hji+S._AC_UL160_SR160,160_.jpg"
+              alt="Image 1"
+            />
+            <a href="http://">Ratchet & Clank: Rift Apart - PlayStation 5</a
+            ><br />
+            <img class="rating" src="./Img/rating.png" alt="" />
+            <div class="category">
+              <a href="http://">Playstation 4 Accessory Kits</a>
+            </div>
+            <br />
+            <div class="price">
+              $
+              <h3 style="display: inline-block">41.94</h3>
+            </div>
+            <br />
+            <div class="freeshipping">
+              <p>FREE Shipping on orders over $49 shipped by Amazon</p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/61c4Ud7Os4L._AC_UL160_SR160,160_.jpg"
+              alt="Image 1"
+            />
+            <a href="http://"
+              >PS5 Controller Charger Station with Fast Charging AC Adapter
+              5V/3A, Dual Controller</a
+            ><br />
+            <img class="rating" src="./Img/rating.png" alt="" />
+            <div class="category">
+              <a href="http://">Playstation 4 Accessory Kits</a>
+            </div>
+            <br />
+            <div class="price">
+              $
+              <h3 style="display: inline-block">23.99</h3>
+            </div>
+            <br />
+            <div class="freeshipping">
+              <p>FREE Shipping on orders over $49 shipped by Amazon</p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/61c4Ud7Os4L._AC_UL160_SR160,160_.jpg"
+              alt="Image 1"
+            />
+            <a href="http://"
+              >PS5 Controller Charger Station with Fast Charging AC Adapter
+              5V/3A, Dual Controller</a
+            ><br />
+            <img class="rating" src="./Img/rating.png" alt="" />
+            <div class="category">
+              <a href="http://">Playstation 4 Accessory Kits</a>
+            </div>
+            <br />
+            <div class="price">
+              $
+              <h3 style="display: inline-block">23.99</h3>
+            </div>
+            <br />
+            <div class="freeshipping">
+              <p>FREE Shipping on orders over $49 shipped by Amazon</p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/61c4Ud7Os4L._AC_UL160_SR160,160_.jpg"
+              alt="Image 1"
+            />
+            <a href="http://"
+              >PS5 Controller Charger Station with Fast Charging AC Adapter
+              5V/3A, Dual Controller</a
+            ><br />
+            <img class="rating" src="./Img/rating.png" alt="" />
+            <div class="category">
+              <a href="http://">Playstation 4 Accessory Kits</a>
+            </div>
+            <br />
+            <div class="price">
+              $
+              <h3 style="display: inline-block">23.99</h3>
+            </div>
+            <br />
+            <div class="freeshipping">
+              <p>FREE Shipping on orders over $49 shipped by Amazon</p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/61c4Ud7Os4L._AC_UL160_SR160,160_.jpg"
+              alt="Image 1"
+            />
+            <a href="http://"
+              >PS5 Controller Charger Station with Fast Charging AC Adapter
+              5V/3A, Dual Controller</a
+            ><br />
+            <img class="rating" src="./Img/rating.png" alt="" />
+            <div class="category">
+              <a href="http://">Playstation 4 Accessory Kits</a>
+            </div>
+            <br />
+            <div class="price">
+              $
+              <h3 style="display: inline-block">23.99</h3>
+            </div>
+            <br />
+            <div class="freeshipping">
+              <p>FREE Shipping on orders over $49 shipped by Amazon</p>
+            </div> -->
+            <!-- card -->
+          <!-- </div>  -->
+          <!-- slide -->
+        <!-- </div>   -->
+        <!-- slides -->
       </div>
-      <button class="carousel-prev">Previous</button>
-      <button class="carousel-next">Next</button>
+      <button class="carousel-next">&#9002;</button>
+    <!-- container -->
     </div>
     <script>
       const container = document.querySelector(".carousel-container");
@@ -115,7 +547,7 @@
 
       function showSlide(index) {
         slides.forEach((slide, i) => {
-          slide.style.transform = `translateX(${100 * (i - index)}%)`;
+          slide.style.transform = `translateX(${200 * (i - index)}%)`;
         });
       }
 
