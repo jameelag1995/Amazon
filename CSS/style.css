@@ -7,7 +7,7 @@ body {
   background: #ffffff;
 
   height: 100%;
-  width: 100vw;
+  width: 100%;
 }
 nav {
   grid-area: nav;
@@ -18,16 +18,16 @@ nav {
   align-items: center;
   background: #131921;
   /* width: 99.6vw; */
-  width: 100%;
+  min-width: 100vw;
   height: 60px;
-  padding: 0 8px;
+  padding: 0 8px 0 30px;
 }
 .logo {
   width: 99px;
   height: 49px;
   background: url("../Img/resized-amazon-logo.png") no-repeat center
     center/cover;
-    grid-area: logo;
+  grid-area: logo;
 }
 .logo:hover {
   border: 1px solid whitesmoke;
@@ -49,13 +49,13 @@ nav {
   color: #a3a4a6;
 }
 .loc {
-  min-width: 30px;
+  width: 30px;
   height: 30px;
   display: inline-block;
 }
 .shipping:hover {
   border: 1px solid whitesmoke;
-  min-width: 90px;
+  width: 95px;
   cursor: pointer;
 }
 .search {
@@ -63,11 +63,10 @@ nav {
   justify-content: stretch;
   align-items: center;
   flex-grow: 1;
-  min-width: 450px;
-  padding:  0 8px;
+  width: 450px;
+  padding: 0 8px;
   grid-area: search;
 }
-
 
 .dropbtn {
   background-color: #d4d4d4;
@@ -89,7 +88,7 @@ nav {
   display: none;
   position: absolute;
   background-color: #d4d4d4;
-  min-width: 160px;
+  width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   width: 196px;
@@ -115,14 +114,14 @@ nav {
   background-color: #b1b0b0;
   color: black;
 }
-.searchbar{
+.searchbar {
   width: 100%;
 }
 
 .sbar {
   width: 100%;
   border: 2px solid white;
-  min-width: 346px;
+
   height: 38px;
 }
 .simg {
@@ -132,7 +131,6 @@ nav {
 }
 .lang {
   width: 73px;
-  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,14 +165,12 @@ nav {
   text-decoration: none;
   color: #ffffff;
   top: 18px;
-  
 }
-.acclink:hover{
+.acclink:hover {
   color: #ffffff;
   text-decoration: none;
 }
-.acclink  h5{
-  
+.acclink h5 {
   font-weight: 500;
 }
 .returns {
@@ -183,7 +179,7 @@ nav {
 }
 .returns:hover {
   border: 2px solid whitesmoke;
-  min-width: 90px;
+  width: 77px;
   cursor: pointer;
   color: #ffffff;
   text-decoration: none;
@@ -194,7 +190,6 @@ nav {
   height: 50px;
   display: flex;
   position: relative;
-  
 }
 .cart:hover {
   border: 2px solid whitesmoke;
@@ -209,6 +204,7 @@ nav {
   grid-area: bottomnav;
   height: 39px;
   width: 100%;
+
   background: #232f3e;
   display: flex;
   justify-content: flex-start;
@@ -217,7 +213,7 @@ nav {
 .bottomnav > a {
   color: #ffffff;
   text-decoration: none;
-  padding: 5px 10px 0 5px;
+  padding: 5px 10px 0 30px;
 }
 .bmenu {
   display: flex;
@@ -232,36 +228,24 @@ nav {
   padding-left: 10px;
   color: #717373;
   text-decoration: none;
+  display: block;
+  position: absolute;
+  top: -180px;
+  left: 0;
 }
 .back-btn:hover {
   text-decoration: underline;
 }
-.grid {
-  display: grid;
-  grid-template-areas:
-    "nav nav nav nav nav nav"
-    "bottomnav bottomnav bottomnav bottomnav bottomnav bottomnav"
-    "sideimg sideimg main main main side2"
-    "sideimg sideimg main main main side2"
-    "sideimg sideimg main main main side2"
-    "sideimg sideimg main main main side2"
-    "footer footer footer footer footer footer ";
-  justify-content: space-around;
-  align-items: flex-start;
-  gap: 2rem;
-  max-width: 1464px;
-  
-  margin: auto;
-}
+
 .sideimg {
   grid-area: sideimg;
   /* border: 1px solid black; */
   padding: 10px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: start;
   position: sticky;
-  top: 0;
+  margin: auto;
 
   max-width: 500px;
 }
@@ -269,17 +253,20 @@ nav {
   grid-area: main;
   /* border: 1px solid black; */
   max-width: 705px;
+  margin: auto;
 }
 .side2 {
   grid-area: side2;
   /* border: 1px solid black; */
   max-width: 242px;
+  margin-top: 30px;
 }
 .footer {
   grid-area: footer;
   /* border: 1px solid black; */
   max-height: 500px;
   max-width: 1464px;
+  margin: auto;
 }
 
 .row > img {
@@ -335,13 +322,11 @@ nav {
   flex-wrap: wrap;
 }
 .op {
-  
   cursor: pointer;
   border-radius: 10px;
   margin-right: 20px;
-  
 }
-.op img{
+.op img {
   width: 76px;
   height: 78px;
 }
@@ -350,7 +335,6 @@ nav {
 }
 .main .r3 {
   border-bottom: #bbbfbf 1px solid;
-  
 }
 .main .r4 {
   margin-top: 30px;
@@ -375,6 +359,7 @@ nav {
 .info {
   border: #bbbfbf 1px solid;
   border-radius: 5px;
+  padding: 14px 18px;
 }
 .info a {
   text-decoration: none;
@@ -465,148 +450,294 @@ nav {
   left: 0;
   z-index: 1;
   display: none;
+  overflow: visible;
 }
 
-.menu-wrap .toggler {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  opacity: 0;
-}
-
-.menu-wrap .hamburger {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 60px;
-  height: 60px;
-  padding: 1rem;
-  background: var(--primary-color);
-  display: flex;
-  align-items: center;
+.main-grid {
+  display: grid;
+  grid-template-areas:
+    "nav"
+    "bottomnav"
+    "inner-grid";
+  min-width: 100vw;
+  margin: auto;
   justify-content: center;
+  align-items: flex-start;
 }
-
-/* Hamburger Line */
-.menu-wrap .hamburger > div {
-  position: relative;
-  flex: none;
-  width: 100%;
-  height: 2px;
-  background: #fff;
-  display: flex;
-  align-items: center;
+.inner-grid {
+  grid-area: inner-grid;
+  display: grid;
+  grid-template-areas:
+    "sideimg sideimg main main main side2"
+    "sideimg sideimg main main main side2"
+    "sideimg sideimg main main main side2"
+    "sideimg sideimg main main main side2"
+    "footer footer footer footer footer footer ";
   justify-content: center;
-  transition: all 0.4s ease;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 1464px;
+  margin: auto;
 }
-
-/* Hamburger Lines - Top & Bottom */
-.menu-wrap .hamburger > div::before,
-.menu-wrap .hamburger > div::after {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  top: -10px;
-  width: 100%;
-  height: 2px;
-  background: inherit;
+.mobilenav {
+  grid-area: mobilenav;
+  display: none;
 }
-
-/* Moves Line Down */
-.menu-wrap .hamburger > div::after {
-  top: 10px;
-}
-
-/* Toggler Animation */
-.menu-wrap .toggler:checked + .hamburger > div {
-  transform: rotate(135deg);
-}
-
-/* Turns Lines Into X */
-.menu-wrap .toggler:checked + .hamburger > div:before,
-.menu-wrap .toggler:checked + .hamburger > div:after {
-  top: 0;
-  transform: rotate(90deg);
-}
-
-/* Rotate On Hover When Checked */
-.menu-wrap .toggler:checked:hover + .hamburger > div {
-  transform: rotate(225deg);
-}
-
-/* Show Menu */
-.menu-wrap .toggler:checked ~ .menu {
-  visibility: visible;
-}
-
-.menu-wrap .toggler:checked ~ .menu > div {
-  transform: translateX(0);
-  transition-duration: var(--menu-speed);
-}
-
-.menu-wrap .toggler:checked ~ .menu > div > div {
-  opacity: 1;
-  transition:  opacity 0.4s ease 0.4s;
-}
-
-.menu-wrap .menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  visibility: hidden;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.menu-wrap .menu > div {
-  background: var(--overlay-color);
-  border-radius: 50%;
-  width: 100vw;
-  height: 200vw;
-  display: flex;
-  flex: none;
-  align-items: center;
-  justify-content: center;
-  transform: translateX(-100vw);
-  transition: all 0.4s ease;
-}
-
-.menu-wrap .menu > div > div {
-  text-align: center;
-  max-width: 90vw;
-  max-height: 100vh;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.menu-wrap .menu > div > div > ul > li {
-  list-style: none;
-  color: #fff;
-  font-size: 1.5rem;
-  padding: 1rem;
-}
-
-.menu-wrap .menu > div > div > ul > li > a {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.4s ease;
-}
-
-.menu-wrap .menu > div > div > ul > li > a:hover {
-  color: var(--secondary-color);
-}
-@media (max-width:500px) {
-  .menu-wrap{
-    display: inline-block;
+@media (max-width: 500px) {
+  body {
+    width: 100vw;
   }
-  
+  .main-grid {
+    grid-template-areas:
+      "mobilenav"
+      "inner-grid";
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+  }
+  .inner-grid {
+    grid-template-areas:
+      "sideimg"
+      "main"
+      "side2";
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100vw;
+  }
+
+  .sideimg {
+    width: 100%;
+  }
+  .main {
+    width: 100%;
+  }
+  .footer {
+    display: none;
+  }
+  nav {
+    display: none;
+  }
+  .bottomnav {
+    display: none;
+  }
+  .mobilenav {
+    display: flex;
+    flex-direction: column;
+    background-color: #232f3e;
+    width: 100%;
+  }
+  .nav1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #232f3e;
+    width: 100%;
+
+    height: 60px;
+  }
+  .menu-wrap {
+    display: inline-block;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hamburger Line */
+  .menu-wrap .hamburger > div {
+    position: relative;
+    flex: none;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+  /* Hamburger Lines - Top & Bottom */
+  .menu-wrap .hamburger > div::before,
+  .menu-wrap .hamburger > div::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+  }
+
+  /* Moves Line Down */
+  .menu-wrap .hamburger > div::after {
+    top: 10px;
+  }
+
+  /* Toggler Animation */
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+  }
+
+  /* Turns Lines Into X */
+  .menu-wrap .toggler:checked + .hamburger > div:before,
+  .menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  /* Rotate On Hover When Checked */
+  .menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+  }
+
+  /* Show Menu */
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+  }
+
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: translateX(0);
+    transition-duration: 1s;
+  }
+
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease 0.4s;
+  }
+
+  .menu-wrap .menu {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-wrap .menu > div {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100vw);
+    transition: all 0.4s ease;
+  }
+  .browse {
+    background: #232f3e;
+    height: 128px;
+    width: 100%;
+    padding-left: 20px;
+    color: #fff;
+  }
+  .browse a {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+  }
+  .amazonhome {
+    display: flex;
+    margin: auto;
+    height: 55px;
+    width: 100%;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: #d5dbdb solid 3px;
+    cursor: pointer;
+    background: #ffffff;
+  }
+  .trending {
+    height: 106;
+    width: 100%;
+    border-bottom: #d5dbdb solid 3px;
+    margin-left: 20px;
+    background: #ffffff;
+  }
+  .trending p {
+    font-size: 18px;
+  }
+  .topdepartments {
+    height: 320px;
+    width: 100%;
+    margin-left: 20px;
+    line-height: 5rem;
+    cursor: pointer;
+    background: #ffffff;
+  }
+
+  .logo {
+    width: 80px;
+    height: 40px;
+    background: url("../Img/resized-amazon-logo.png") no-repeat center
+      center/cover;
+    grid-area: logo;
+  }
+  .nav1 .cart {
+    width: 150px;
+  }
+  .nav1 .cart:hover {
+    border: none;
+  }
+  .nav1 .cart a {
+    color: #fff;
+  }
+  .nav2 {
+    width: 90%;
+    height: 60px;
+    position: relative;
+  }
+  .search {
+    width: 100%;
+  }
+  .nav3 {
+    width: 100%;
+    height: 44px;
+    color: #fff;
+    background: #37475a;
+    display: flex;
+    padding: 5px 8px;
+  }
+  .sideimg {
+    width: 500px;
+  }
+  .main {
+    width: 500px;
+    padding: 0 30px;
+  }
+  .side2 {
+    margin: auto;
+  }
 }
