@@ -37,4 +37,4 @@ Create a webpage that mimics the layout and functionality of an Amazon product p
 
 
 - [] My Webpage
-![Original amazon webpage](./Img/Screenshot-of-my-Webpage.png)
+![Original amazon webpage](./Img//myscreenshot.png)
