@@ -1,5 +1,7 @@
 # Task: Copy Amazon Product Page
 
+### Netlify Link - https://appleseedsamazonproject.netlify.app/
+
 ## Description
 Create a webpage that mimics the layout and functionality of an Amazon product page. The goal is to replicate the following elements:
 
