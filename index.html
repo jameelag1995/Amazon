@@ -143,56 +143,58 @@
       <div class="inner-grid">
         <div class="sideimg">
           <a class="back-btn" href="http://">&lsaquo; Back to results</a>
-          <!-- The grid: four columns -->
-          <div class="column">
-            <div class="row">
+          <div>
+            <!-- The grid: four columns -->
+            <div class="column">
+              <div class="row">
+                <img
+                  src="https://m.media-amazon.com/images/I/61O9tWR6WDS._SX466_.jpg"
+                  alt="1st"
+                  onclick="myFunction(this);"
+                />
+              </div>
+              <div class="row">
+                <img
+                  src="https://m.media-amazon.com/images/I/61jRyJEPwRS._SX342_.jpg"
+                  alt="2nd"
+                  onclick="myFunction(this);"
+                />
+              </div>
+              <div class="row">
+                <img
+                  src="https://m.media-amazon.com/images/I/61kFuoDu45S._SX342_.jpg"
+                  alt="3rd"
+                  onclick="myFunction(this);"
+                />
+              </div>
+              <div class="row">
+                <img
+                  src="https://m.media-amazon.com/images/I/61rIaBAtTZS._SX342_.jpg.jpg"
+                  alt="4th"
+                  onclick="myFunction(this);"
+                />
+              </div>
+            </div>
+
+            <!-- The expanding image container -->
+            <div class="container">
+              <!-- Expanded image -->
               <img
                 src="https://m.media-amazon.com/images/I/61O9tWR6WDS._SX466_.jpg"
-                alt="1st"
-                onclick="myFunction(this);"
+                id="expandedImg"
+                style="width: 70%"
               />
-            </div>
-            <div class="row">
-              <img
-                src="https://m.media-amazon.com/images/I/61jRyJEPwRS._SX342_.jpg"
-                alt="2nd"
-                onclick="myFunction(this);"
-              />
-            </div>
-            <div class="row">
-              <img
-                src="https://m.media-amazon.com/images/I/61kFuoDu45S._SX342_.jpg"
-                alt="3rd"
-                onclick="myFunction(this);"
-              />
-            </div>
-            <div class="row">
-              <img
-                src="https://m.media-amazon.com/images/I/61rIaBAtTZS._SX342_.jpg.jpg"
-                alt="4th"
-                onclick="myFunction(this);"
-              />
-            </div>
-          </div>
 
-          <!-- The expanding image container -->
-          <div class="container">
-            <!-- Expanded image -->
-            <img
-              src="https://m.media-amazon.com/images/I/61O9tWR6WDS._SX466_.jpg"
-              id="expandedImg"
-              style="width: 70%"
-            />
-
-            <script>
-              function myFunction(imgs) {
-                var expandImg = document.getElementById("expandedImg");
-                var imgText = document.getElementById("imgtext");
-                expandImg.src = imgs.src;
-                imgText.innerHTML = imgs.alt;
-                expandImg.parentElement.style.display = "inline-block";
-              }
-            </script>
+              <script>
+                function myFunction(imgs) {
+                  var expandImg = document.getElementById("expandedImg");
+                  var imgText = document.getElementById("imgtext");
+                  expandImg.src = imgs.src;
+                  imgText.innerHTML = imgs.alt;
+                  expandImg.parentElement.style.display = "inline-block";
+                }
+              </script>
+            </div>
           </div>
         </div>
         <div class="main">

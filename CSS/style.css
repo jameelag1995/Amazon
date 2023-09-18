@@ -248,7 +248,16 @@ nav {
   justify-content: space-evenly;
   align-items: start;
   width: 500px;
+  height: 700px;
   position: relative;
+}
+.sideimg > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  position: sticky;
+  width: 100%;
+  top: 0;
 }
 
 .main {
@@ -558,7 +567,7 @@ nav {
     margin-bottom: 60px;
   }
   .menu-wrap .toggler {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
@@ -569,7 +578,7 @@ nav {
   }
 
   .menu-wrap .hamburger {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
